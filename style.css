@@ -8,6 +8,10 @@
     --white: #ffffff;
     --transition: all 0.3s ease;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 * {
     margin: 0;
@@ -35,14 +39,14 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 0.4rem 0;
 }
 
 .logo img {
@@ -110,10 +114,12 @@ nav ul li a.active {
     text-align: center;
     color: var(--hero-text-color);
     background-color: var(--light-bg);
-    padding-top: 8rem; /* Increased padding to account for fixed header */
+    padding-top: 7rem; 
+    margin-top: 12rem;/* Increased padding to account for fixed header */
 }
 
 .hero-content {
+    font-size: larger;
     max-width: 800px;
     padding: 0 20px;
 }
@@ -154,7 +160,7 @@ nav ul li a.active {
 
 /* General Section Spacing */
 .section {
-    padding: 8rem 0; /* Increased padding to create more space around sections */
+    padding: 0rem 0; /* Increased padding to create more space around sections */
 }
 
 /* Vision and Mission Section */
@@ -180,15 +186,17 @@ nav ul li a.active {
     text-align: left;
 }
 
+
+
 /* About Us Section */
 #about {
-    padding: 8rem 0; /* Increased padding to ensure space between sections */
+    padding: 0rem 0; /* Increased padding to ensure space between sections */
     background-color: var(--light-bg);
 }
 
 #about .container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 205px 235px;
     text-align: center;
     padding: 2rem;
     background: var(--white);
@@ -241,6 +249,118 @@ nav ul li a.active {
     padding: 1rem;
 }
 
+.projects ul li{
+    text-decoration:none
+}
+
+/* Initiatives Section */
+.initiatives-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0; /* Add spacing above and below the section */
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+/* Individual Project Styles */
+.project {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 300px; /* Flexbox settings to allow growth and shrink */
+    max-width: calc(50% - 2rem); /* Ensure two projects per row on larger screens */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Project Image Styles */
+.initiative-image img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    border-radius: 10px;
+    margin: 1rem 0; /* Space around the image */
+}
+
+/* Hover Effect for Projects */
+.project:hover {
+    transform: translateY(-5px); /* Lift the project card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.initiatives-container h2{
+    font-size: x-large;
+    margin: 5px 25px;
+}
+
+/* Contact Form Styles */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Limit width for better appearance */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
 /* Partners Section */
 .partners-list {
     display: flex;
@@ -268,7 +388,7 @@ nav ul li a.active {
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 2rem 0;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -289,11 +409,11 @@ footer p {
         flex-direction: column;
         gap: 1rem;
     }
-
+    
     .intro-container, .vision-mission-container {
         padding: 0 10px;
     }
-
+    
     #about .container {
         padding: 1rem;
     }
@@ -301,7 +421,7 @@ footer p {
     #about h2 {
         font-size: 2rem;
     }
-
+    
     #about p {
         font-size: 1rem;
         line-height: 1.6;
@@ -312,12 +432,25 @@ footer p {
     .hero h1 {
         font-size: 2.5rem;
     }
-
+    
     section h2 {
         font-size: 2rem;
     }
-
+    
     .btn {
         padding: 0.7rem 1.5rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .initiative-content {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+    .initiative-column {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+    .initiative-image {
+        margin: 1rem 0; /* Space between the image and text on mobile */
     }
 }
