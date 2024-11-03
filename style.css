@@ -89,20 +89,6 @@ nav ul li a.active {
     transition: var(--transition);
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .show-nav {
-        display: flex !important;
-    }
-}
 
 /* Hero Section */
 .hero {
@@ -452,5 +438,20 @@ footer p {
     }
     .initiative-image {
         margin: 1rem 0; /* Space between the image and text on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .show-nav {
+        display: flex !important;
     }
 }
