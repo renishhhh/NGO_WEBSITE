@@ -19,6 +19,40 @@ html {
     box-sizing: border-box;
 }
 
+.initiatives-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.initiatives-content {
+    display: flex;
+    gap: 20px;
+}
+
+.initiative-column {
+    flex: 1;
+    max-width: 455px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.initiative-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.initiative-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
@@ -257,19 +291,19 @@ nav ul li a.active {
 
 /* Individual Project Styles */
 .project {
+    width: 390px;
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
-    margin: 1rem;
-    flex: 1 1 300px; /* Flexbox settings to allow growth and shrink */
-    max-width: calc(50% - 2rem); /* Ensure two projects per row on larger screens */
+    margin: 35px 32px;
+    flex: 1 1 464px; /* Flexbox settings to allow growth and shrink */
     transition: transform 0.3s ease; /* Add transition for hover effect */
 }
 
 /* Project Image Styles */
 .initiative-image img {
-    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    max-width: 115%; /* Ensure the image does not exceed the width of its container */
     border-radius: 10px;
     margin: 1rem 0; /* Space around the image */
 }
